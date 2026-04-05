@@ -1,0 +1,26 @@
+import 'package:basic_app/pages/first_page.dart';
+import 'package:basic_app/pages/second_page.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // List<String> names = ["Nina", "Pedro", "Marcos", "Felipe"];
+
+  // void userTapped(){
+  //   print("User tapped!");
+  // }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FirstPage(),
+      routes: {"/secondpage" : (context) => SecondPage()},
+    );
+  }
+}
