@@ -40,6 +40,7 @@ class FirstPage extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.settings),
                     title: Text("SETTINGS"),
+                    onTap: () => Navigator.pushNamed(context, "/settingspage"),
                   ),
 
                   ListTile(
