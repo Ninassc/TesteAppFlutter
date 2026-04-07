@@ -1,16 +1,29 @@
+import 'package:basic_app/pages/home_page.dart';
+import 'package:basic_app/pages/profile_page.dart';
+import 'package:basic_app/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class FirstPage extends StatefulWidget {
+  FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  int _selectesIndex = 0;
+
+  void _navigateBottomBar(int index) {
+    setState(() {
+      _selectesIndex = index;
+    });
+  }
+
+  final List _pages = [HomePage(), ProfilePage(), SettingsPage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("First Page"),
-        backgroundColor: Colors.blueGrey,
-      ),
-
       drawer: Drawer(
         backgroundColor: Colors.blueAccent,
         child: Column(
@@ -33,6 +46,7 @@ class FirstPage extends StatelessWidget {
                     leading: Icon(Icons.home),
                     title: Text("HOME"),
                     onTap: () {
+                      Navigator.pop(context);
                       Navigator.pushNamed(context, "/homepage");
                     },
                   ),
@@ -103,6 +117,24 @@ class FirstPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+
+      body: _pages[_selectesIndex],
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectesIndex,
+        onTap: _navigateBottomBar,
+
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "Settings",
+          ),
+        ],
       ),
 
       // body: Center(
