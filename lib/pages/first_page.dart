@@ -1,3 +1,4 @@
+import 'package:basic_app/pages/counter_page.dart';
 import 'package:basic_app/pages/home_page.dart';
 import 'package:basic_app/pages/profile_page.dart';
 import 'package:basic_app/pages/settings_page.dart';
@@ -19,7 +20,12 @@ class _FirstPageState extends State<FirstPage> {
     });
   }
 
-  final List _pages = [HomePage(), ProfilePage(), SettingsPage()];
+  final List _pages = [
+    HomePage(),
+    ProfilePage(),
+    SettingsPage(),
+    CounterPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -122,17 +128,25 @@ class _FirstPageState extends State<FirstPage> {
       body: _pages[_selectesIndex],
 
       bottomNavigationBar: BottomNavigationBar(
+
+        type: BottomNavigationBarType.fixed,
         currentIndex: _selectesIndex,
         onTap: _navigateBottomBar,
 
-        items: [
+        backgroundColor: const Color.fromARGB(255, 181, 205, 212),
+        selectedItemColor: Colors.white,
+        unselectedItemColor: const Color.fromARGB(255, 126, 121, 121),
+        
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: "Settings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.plus_one),
+            label: "Counter",
           ),
         ],
       ),
