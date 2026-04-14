@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         title: Text("Home Page"),      
       ),
       drawer: MyDrawer(),
-      bottomNavigationBar: MyBottomNavBar(currentIndex: 1),
+      bottomNavigationBar: MyBottomNavBar(currentIndex: 0),
 
       body: Center(
         child: Text("Home Page"),

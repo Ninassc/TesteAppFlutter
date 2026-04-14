@@ -6,7 +6,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: const Color.fromARGB(255, 89, 132, 153), // Azul mais acinzentado (Blue Grey)
       child: Column(
         children: [
           const DrawerHeader(
@@ -33,7 +33,7 @@ class MyDrawer extends StatelessWidget {
                   leading: const Icon(Icons.person),
                   title: const Text("PROFILE"),
                   onTap: () {
-                    Navigator.pushNamed(context, "/profile");
+                    Navigator.pushNamed(context, "/profilepage");
                   },
                 ),
                 ListTile(
