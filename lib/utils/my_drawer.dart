@@ -17,8 +17,8 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           ListTileTheme(
-            iconColor: Colors.white,
-            textColor: Colors.white,
+            iconColor: Color.fromARGB(255, 240, 248, 255),
+            textColor: Color.fromARGB(255, 240, 248, 255),
             child: Column(
               children: [
                 ListTile(
@@ -42,47 +42,55 @@ class MyDrawer extends StatelessWidget {
                   onTap: () => Navigator.pushNamed(context, "/settingspage"),
                 ),
                 ListTile(
-                  leading: const Icon(Icons.favorite),
-                  title: const Text("FAVORITES"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/favorites");
-                  },
+                  leading: const Icon(Icons.plus_one),
+                  title: const Text("COUNTER"),
+                  onTap: () => Navigator.pushNamed(context, "/counterpage"),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.notifications),
-                  title: const Text("NOTIFICATIONS"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/notifications");
-                  },
+                 ListTile(
+                  leading: const Icon(Icons.list),
+                  title: const Text("TODO"),
+                  onTap: () => Navigator.pushNamed(context, "/todopage"),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.shopping_cart),
-                  title: const Text("CART"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/cart");
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.history),
-                  title: const Text("HISTORY"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/history");
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.help_outline),
-                  title: const Text("HELP"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/help");
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.info),
-                  title: const Text("ABOUT"),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/about");
-                  },
-                ),
+                // ListTile(
+                //   leading: const Icon(Icons.favorite),
+                //   title: const Text("FAVORITES"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/favorites");
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const Icon(Icons.notifications),
+                //   title: const Text("NOTIFICATIONS"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/notifications");
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const Icon(Icons.shopping_cart),
+                //   title: const Text("CART"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/cart");
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const Icon(Icons.history),
+                //   title: const Text("HISTORY"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/history");
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const Icon(Icons.help_outline),
+                //   title: const Text("HELP"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/help");
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const Icon(Icons.info),
+                //   title: const Text("ABOUT"),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, "/about");
               ],
             ),
           ),

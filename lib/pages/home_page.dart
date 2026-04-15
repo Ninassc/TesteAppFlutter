@@ -8,8 +8,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 240, 248, 255),
       appBar: AppBar(
         title: Text("Home Page"),      
+        backgroundColor: Color.fromARGB(255, 240, 248, 255),
       ),
       drawer: MyDrawer(),
       bottomNavigationBar: MyBottomNavBar(currentIndex: 0),
