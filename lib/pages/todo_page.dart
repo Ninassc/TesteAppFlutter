@@ -33,6 +33,7 @@ class _TodoPageState extends State<TodoPage> {
         child: Padding(
           padding: const EdgeInsets.all(25.0),
           child: Column(
+            spacing: 20,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(greetingMessage),
